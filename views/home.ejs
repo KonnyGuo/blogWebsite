@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+
+<h1> Home </h1>
+<p> <%= EJShomeStartingContent %> </p>
+
+<!--  -->
+<% for(let i = 0; i < EJSpostArray.length; i++){ %>
+    <h1> <%= EJSpostArray[i].postTitle %> </h1>
+    <p> <%= EJSpostArray[i].postBody.substring(0,100) + "..." %>
+        <a href="posts/<%=EJSpostArray[i].postTitle%>">Read more</a>
+    </p>
+<% } %>
+
+
+<%- include("partials/footer"); -%>
+
